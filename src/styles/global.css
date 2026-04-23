@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'titulo';
+  src: url('/fonts/poppins/bold.woff2') format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'porDefecto';
+  src: url('/fonts/poppins/medium.woff2') format('woff2');
+  font-weight: normal;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    font-family: 'porDefecto', sans-serif;
+    color: white;
+    background: #063940;
+    background: linear-gradient(180deg, rgba(6, 57, 64, 1) 37%, rgba(25, 94, 99, 1) 100%);
+}
