@@ -12,8 +12,14 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'light';
+  src: url('/fonts/poppins/light.woff2') format('woff2');
+  font-weight: normal;
+}
+
 html, body{
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 
