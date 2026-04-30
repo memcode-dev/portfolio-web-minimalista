@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+
+import PortfolioImage from '../assets/images/portfolio.png';
+
+
+const listaProyectos = [
+    {titulo: "Portfolio", img: PortfolioImage, desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. adipisicing elit. Quisquam, voluptatum.", pagina: "", github: ""},
+    {titulo: "Calculadora", img: PortfolioImage, desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. adipisicing elit. Quisquam, voluptatum.", pagina: "", github: ""},
+    {titulo: "Calculadora", img: PortfolioImage, desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. adipisicing elit. Quisquam, voluptatum.", pagina: "", github: ""},
+]
+
+
+---
+
+
+
+<div class="flex w-7/12 flex-col justify-center mx-auto">
+    <h2 class="text-2xl text-center mb-10">Proyectos</h2>
+    <div class="cont-proyectos grid grid-cols-3 gap-4">
+
+        {
+            listaProyectos.map((proyecto) => (
+                <div class="flex flex-col bg-[#063940] p-4 rounded-3xl">
+                    <h3 class="my-2 text-center text-[19px] justify-center">{proyecto.titulo}</h3>
+                    <Image src={proyecto.img} alt="Imagen del proyecto" class="rounded-3xl" />
+                    <p class="text-[15px] my-4 desc-proyecto">{proyecto.desc}</p>
+                <div class="flex justify-between mt-4">
+                    <a class="underline bg-orange-400 hover:bg-orange-500 px-4 py-2 rounded-3xl" href={proyecto.pagina} target="_blank">Pagina</a>
+                    <a class="bg-gray-700 border border-gray-500 hover:bg-gray-800 px-4 py-2 rounded-3xl" href={proyecto.github} target="_blank">GitHub</a>
+                </div>
+                </div>
+            ))
+        } 
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .desc-proyecto{
+        font-family: 'light', sans-serif;
+    }
+</style>
